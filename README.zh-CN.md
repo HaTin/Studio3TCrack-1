@@ -1,6 +1,6 @@
 ## Studio3TCrack
 
-中文 | [English](https://github.com/linG5821/Studio3TCrack/blob/master/README.md)
+[English](https://github.com/linG5821/Studio3TCrack/blob/master/README.md) | 中文
 
 #### Studio 3T
 
