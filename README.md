@@ -1,19 +1,21 @@
 ## Studio3TCrack
 
+English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.zh-CN.md)
+
 #### Studio 3T
 
-  Studio 3T是一个功能强大的MongoDB数据库管理工具，它提供GUI可视化操作。它可以完全让您告别命令行。软件提供30天的适用版本!
+  Studio 3T is a powerful MongoDB database management tool that provides GUI visualization operations. It can completely let you say goodbye to the command line. The software provides the applicable version for a period of 30 days!
 
-#### Studio3TCrack介绍
+#### Studio3TCrack Introduce
 
-  首先，我想表达我的歉意。这个项目绕过了许可证测试，这意味着Studio 3T可以无限期地使用。但是***Pro*** 和***Enterprise*** 企业功能没有被修改,这个程序仅供学习和交流,如果有需要,请购买正版Studio 3T](https://studio3t.com)
+  First of all, I would like to express my apology. This project bypasses the license test, which means Studio 3T can be used indefinitely.However, ***Pro*** and ***Enterprise*** functionality has not been modified，This program is for study and communication only,If necessary, please purchase the legitimate [Studio 3T](https://studio3t.com)
 
-#### 其他介绍
+#### Other introduced
 
- 同样也提供了windows64的.exe文件。您可以Clone本仓库获得所需的内容。构建使用了[exe4j](https://www.ej-technologies.com/)，如果需要，您可以从网站获得并构建自己的可执行文件。
+ Similarly, windows64 is also available with a.exe executable that you can Clone from this repository to get what you need.The build use [exe4j](https://www.ej-technologies.com/), which you can get from the website and build your own 32-bit executable if you need to.
 
-#### 怎么使用
+#### How to Use?
 
-1. 如果您选择使用***studio-3t-start.jar***，您可以直接复制到安装文件的根目录并运行原来的studio 3t可执行文件。
-2. 如果选择免安装，则可以使用已经在项目中构建好的.exe可执行文件，但是您需要将名称为**jre**的java可执行环境放入相同目录，或者您已经在本地配置了**JAVA_HOME**环境变量。
+1. If you choose to use ***studio-3t-start.jar***, you need to copy the changes directly to the root of the installation file and run this jar.
+2. If you choose to do this installation-free, you can use the.exe executable that you've already built in your project, but you'll need to put a jre in the file directory with the name **jre**, or you'll already have the **JAVA_HOME** environment variable configured locally.
 
