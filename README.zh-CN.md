@@ -8,7 +8,8 @@
 
 #### Studio3TCrack介绍
 
-  首先，我想表达我的歉意。这个项目绕过了许可证测试，这意味着Studio 3T可以无限期地使用。但是***Pro*** 和***Enterprise*** 企业功能没有被修改,这个程序仅供学习和交流,如果有需要,请购买正版Studio 3T](https://studio3t.com)
+  首先，我想表达我的歉意。这个项目绕过了许可证测试，这意味着Studio 3T可以无限期地使用。但是**Pro** 和**Enterprise** 企业功能没有被修改,这个程序仅供学习和交流,如果有需要,请购买正版Studio 3T](https://studio3t.com)
+
 
 #### 其他介绍
 
@@ -16,6 +17,18 @@
 
 #### 怎么使用
 
-1. 如果您选择使用***studio-3t-start.jar***，您可以直接复制到安装文件的根目录并运行这个jar包。
+1. 如果您选择使用**studio-3t-start.jar**，您可以直接复制到安装文件的根目录并运行这个jar包。
+
 2. 如果选择免安装，则可以使用已经在项目中构建好的.exe可执行文件，但是您需要将名称为**jre**的java可执行环境放入相同目录，或者您已经在本地配置了**JAVA_HOME**环境变量。
+
+3. Mac 版本的使用
+
+   首先我建议您先把原本安装的Studio 3T包文件中的app目录下依赖的所有jar包全部拷贝出来，放在一个单独的目录下,然后下载studio-3t-start-mac.jar文件拷贝在该目录下，紧接着进入该目录运行 ``` java -jar -XstartOnFirstThread ./studio-3t-start-mac.jar```当然你也可以写一个bash脚本，以下是一个示例,注意这里的路径必须是绝对路径
+
+   ```bash
+   # ! /bin/bash
+   nohup java -jar -XstartOnFirstThread /Users/xxx/Applications/Studio3T/app/studio-3t-start-mac.jar >/dev/null 2>&1 &
+   ```
+
+   
 
