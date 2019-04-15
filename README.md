@@ -28,6 +28,9 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
    # ! /bin/bash
    nohup java -jar -XstartOnFirstThread /Users/xxx/Applications/Studio3T/app/studio-3t-start-mac.jar >/dev/null 2>&1 &
    ```
-
+#### Version Update
+    studio-3t-start-2019.2.1:Updated the code implementation, using new ideas to adapt to the new version of Studio 3T version 2019.2.1
+    Usage: Same as before
+    Build: This time directly packaged executable jar files contain all dependency packages that can be used directly. Check release
    
 

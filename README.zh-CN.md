@@ -29,6 +29,9 @@
    # ! /bin/bash
    nohup java -jar -XstartOnFirstThread /Users/xxx/Applications/Studio3T/app/studio-3t-start-mac.jar >/dev/null 2>&1 &
    ```
-
+#### 版本更新:
+    studio-3t-start-2019.2.1:更新了代码实现，使用了新的思路，适应Studio3T新版本2019.2.1版本
+    使用方式：与以往相同
+    构建：本次直接打包了可执行的jar文件包含全部依赖包，可以直接使用，请查看release
    
 
