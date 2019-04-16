@@ -1,6 +1,7 @@
 package com.ling;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
@@ -11,7 +12,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public class Start {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         doStart(args);
 //        t3.dataman.mongodb.app.ad.main(args);
     }
@@ -22,33 +23,32 @@ public class Start {
         String packagePath = packageName.replace(".", "/");
         URL url = loader.getResource(packagePath);
         List<String> fileNames = new ArrayList<>();
-        if (url != null) {
-            String type = url.getProtocol();
-            if ("file".equals(type)) {
-                fileNames = getClassNameByFile(url.getPath(), null, true);
-            } else if ("jar".equals(type)) {
-                fileNames = getClassNameByJar(url.getPath(), true);
-            }
-        }
-        for (String fileName : fileNames) {
-            try {
-                Class clazz =  Class.forName(fileName);
-                Method method = clazz.getMethod("main", String[].class);
-                if (method != null && !fileName.matches(".+Studio3T.+")) {
-                    method.invoke(null, (Object) args);
-                    break;
+        try {
+            if (url != null) {
+                String type = url.getProtocol();
+                if ("file".equals(type)) {
+                    fileNames = getClassNameByFile(url.getPath(), null, true);
+                } else if ("jar".equals(type)) {
+                    fileNames = getClassNameByJar(url.getPath(), true);
                 }
-            } catch (ClassNotFoundException e) {
-                System.out.println("解析全类名异常:" + fileName);
-                e.printStackTrace();
-            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-                System.out.println("方法未找到或者调用失败:" + "main");
-                e.printStackTrace();
-            } catch (Exception e) {
-                System.out.println("发生未知异常");
-                e.printStackTrace();
             }
+            for (String fileName : fileNames) {
+                try {
+                    Class clazz =  Class.forName(fileName);
+                    Method method = clazz.getMethod("main", String[].class);
+                    if (method != null && !fileName.matches(".+Studio3T.+")) {
+                        method.invoke(null, (Object) args);
+                        break;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
 
     private static List<String> getClassNameByFile(String filePath, List<String> className, boolean childPackage) {
@@ -72,40 +72,36 @@ public class Start {
         return myClassName;
     }
 
-    private static List<String> getClassNameByJar(String jarPath, boolean childPackage) {
+    private static List<String> getClassNameByJar(String jarPath, boolean childPackage) throws IOException {
         List<String> myClassName = new ArrayList<String>();
         String[] jarInfo = jarPath.split("!");
         String jarFilePath = jarInfo[0].substring(jarInfo[0].indexOf("/"));
         String packagePath = jarInfo[1].substring(1);
-        try {
-            JarFile jarFile = new JarFile(jarFilePath);
-            Enumeration<JarEntry> entrys = jarFile.entries();
-            while (entrys.hasMoreElements()) {
-                JarEntry jarEntry = entrys.nextElement();
-                String entryName = jarEntry.getName();
-                if (entryName.endsWith(".class")) {
-                    if (childPackage) {
-                        if (entryName.startsWith(packagePath)) {
-                            entryName = entryName.replace("/", ".").substring(0, entryName.lastIndexOf("."));
-                            myClassName.add(entryName);
-                        }
+        JarFile jarFile = new JarFile(jarFilePath);
+        Enumeration<JarEntry> entrys = jarFile.entries();
+        while (entrys.hasMoreElements()) {
+            JarEntry jarEntry = entrys.nextElement();
+            String entryName = jarEntry.getName();
+            if (entryName.endsWith(".class")) {
+                if (childPackage) {
+                    if (entryName.startsWith(packagePath)) {
+                        entryName = entryName.replace("/", ".").substring(0, entryName.lastIndexOf("."));
+                        myClassName.add(entryName);
+                    }
+                } else {
+                    int index = entryName.lastIndexOf("/");
+                    String myPackagePath;
+                    if (index != -1) {
+                        myPackagePath = entryName.substring(0, index);
                     } else {
-                        int index = entryName.lastIndexOf("/");
-                        String myPackagePath;
-                        if (index != -1) {
-                            myPackagePath = entryName.substring(0, index);
-                        } else {
-                            myPackagePath = entryName;
-                        }
-                        if (myPackagePath.equals(packagePath)) {
-                            entryName = entryName.replace("/", ".").substring(0, entryName.lastIndexOf("."));
-                            myClassName.add(entryName);
-                        }
+                        myPackagePath = entryName;
+                    }
+                    if (myPackagePath.equals(packagePath)) {
+                        entryName = entryName.replace("/", ".").substring(0, entryName.lastIndexOf("."));
+                        myClassName.add(entryName);
                     }
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
         return myClassName;
     }
