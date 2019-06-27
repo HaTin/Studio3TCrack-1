@@ -16,19 +16,21 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
 
 #### How to Use?
 
-1. If you choose to use ***studio-3t-start.jar***, you need to copy the changes directly to the root of the installation file and run this jar.
+1. Attention!!!Attention!!!Now you can easily skip validation without using any jar packages and just run the command
 
-2. If you choose to do this installation-free, you can use the.exe executable that you've already built in your project, but you'll need to put a jre in the file directory with the name **jre**, or you'll already have the **JAVA_HOME** environment variable configured locally.
+2. Copy a file path named data-man-mongodb-xxxxx.jar from Studio3T installation directory.。
 
-3. How the Mac version is used
+3. Execute in any directory java -jar path(The path copied above must be absolute) t3.dataman.mongodb.app.ad
 
-   First I recommend that you install the original Studio 3 t package files in the app directory depends on all the jars is copied out, in a separate directory, and then download the Studio - 3 t - start - a MAC. Copy the jar files in the directory, and then enter the directory, run ` java -jar -XstartOnFirstThread ./ studio-3t-start-mac.jar `, of course, you can also write a bash script, Here is an example. Note that the path must be absolute
+4. Mac
+    java -XstartOnFirstThread -jar path(The path copied above must be absolute) t3.dataman.mongodb.app.ad
 
    ```bash
    # ! /bin/bash
-   nohup java -jar -XstartOnFirstThread /Users/xxx/Applications/Studio3T/app/studio-3t-start-mac.jar >/dev/null 2>&1 &
+   nohup java -jar path(The path copied above must be absolute) t3.dataman.mongodb.app.ad >/dev/null 2>&1 &
    ```
 #### Version Update
+    2019.6.27: Update starts as a script command, removing code-level control
     studio-3t-start-2019.2.1:Updated the code implementation, using new ideas to adapt to the new version of Studio 3T version 2019.2.1
     Usage: Same as before,No spaces in the path, special characters
     Build: This time directly packaged executable jar files contain all dependency packages that can be used directly. Check release
