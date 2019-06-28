@@ -17,14 +17,14 @@
 
 2. 拷贝Studio3T安装目录下一个名为data-man-mongodb-xxxxx.jar的文件路径。
 
-3. 在任意目录下执行java -jar path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
+3. 在任意目录下执行java -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
 
 4. Mac
-    java -XstartOnFirstThread -jar path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
+    java -XstartOnFirstThread -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
 
    ```bash
    # ! /bin/bash
-   nohup java -jar path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad >/dev/null 2>&1 &
+   nohup java -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad >/dev/null 2>&1 &
    ```
 #### 版本更新:
     2019.6.27: 更新启动方式为脚本命令的方式，移除代码级别的控制

@@ -20,14 +20,14 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
 
 2. Copy a file path named data-man-mongodb-xxxxx.jar from Studio3T installation directory.。
 
-3. Execute in any directory java -jar path(The path copied above must be absolute) t3.dataman.mongodb.app.ad
+3. Execute in any directory java -cp path(The path copied above must be absolute) t3.dataman.mongodb.app.ad
 
 4. Mac
-    java -XstartOnFirstThread -jar path(The path copied above must be absolute) t3.dataman.mongodb.app.ad
+    java -XstartOnFirstThread -cp path(The path copied above must be absolute) t3.dataman.mongodb.app.ad
 
    ```bash
    # ! /bin/bash
-   nohup java -jar path(The path copied above must be absolute) t3.dataman.mongodb.app.ad >/dev/null 2>&1 &
+   nohup java -cp path(The path copied above must be absolute) t3.dataman.mongodb.app.ad >/dev/null 2>&1 &
    ```
 #### Version Update
     2019.6.27: Update starts as a script command, removing code-level control
