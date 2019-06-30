@@ -34,5 +34,15 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
     studio-3t-start-2019.2.1:Updated the code implementation, using new ideas to adapt to the new version of Studio 3T version 2019.2.1
     Usage: Same as before,No spaces in the path, special characters
     Build: This time directly packaged executable jar files contain all dependency packages that can be used directly. Check release
-   
 
+#### Photo Guide
+
+
+
+![image1](https://github.com/linG5821/Studio3TCrack/blob/master/images/1.png)
+
+![image2](https://github.com/linG5821/Studio3TCrack/blob/master/images/2.png)
+
+![image3](https://github.com/linG5821/Studio3TCrack/blob/master/images/3.png)
+
+![image4](https://github.com/linG5821/Studio3TCrack/blob/master/images/4.png)
