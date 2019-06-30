@@ -34,10 +34,10 @@
 
 #### 图片指引
 
-![image1](https://github.com/linG5821/Studio3TCrack/blob/master/images/1.png)
+![image1](./images/1.png)
 
-![image2](https://github.com/linG5821/Studio3TCrack/blob/master/images/2.png)
+![image2](./images/2.png)
 
-![image3](https://github.com/linG5821/Studio3TCrack/blob/master/images/3.png)
+![image3](./images/3.png)
 
-![image4](https://github.com/linG5821/Studio3TCrack/blob/master/images/4.png)
+![image4](./images/4.png)
