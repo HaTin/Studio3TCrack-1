@@ -13,13 +13,21 @@
 
 #### 怎么使用
 
-1. 注意！注意！现在无需使用任何jar包只需要运行命令即可轻松跳过验证。
+##### 包替换方式:
+  1. 备份data-man-mongodb-ent-2019.3.0.jar包
 
-2. 拷贝Studio3T安装目录下一个名为data-man-mongodb-xxxxx.jar的文件路径。
+  2. 拷贝项目中data-man-mongodb-ent-2019.3.0.jar包到安装目录替换原有的包
+  
+  3. 运行官方的二进制可执行文件
 
-3. 在任意目录下执行java -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
+##### 命令方式:
+  1. 注意！注意！现在无需使用任何jar包只需要运行命令即可轻松跳过验证。
 
-4. Mac
+  2. 拷贝Studio3T安装目录下一个名为data-man-mongodb-xxxxx.jar的文件路径。
+
+  3. 在任意目录下执行java -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
+
+  4. Mac
     java -XstartOnFirstThread -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad
 
    ```bash
@@ -27,6 +35,9 @@
    nohup java -cp path(上面复制的路径,必须为绝对路径) t3.dataman.mongodb.app.ad >/dev/null 2>&1 &
    ```
 #### 版本更新:
+    2019.7.26: 1.提供可以直接替换的data-man-mongodb包可以直接拷贝至安装目录进行替换，然后直接官方自带的二进制可执行文件即可，本次包版本2019.3.0
+               2.问题:不能够保存自定义设置，但是连接信息可以保存 
+               3.可以使用企业版功能 使用方式:点击 help->license manager 随便输入一些东西 提示错误后 点击ok 即可使用企业版功能
     2019.6.27: 更新启动方式为脚本命令的方式，移除代码级别的控制
     studio-3t-start-2019.2.1:更新了代码实现，使用了新的思路，适应Studio3T新版本2019.2.1版本
     使用方式：与以往相同,路径中不要出现空格，中文，特殊字符
