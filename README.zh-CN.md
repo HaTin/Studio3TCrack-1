@@ -13,14 +13,14 @@
 
 #### 怎么使用
 
-##### Package replace:
+##### 包替换方式:
   1. 备份data-man-mongodb-ent-2019.3.0.jar包
 
   2. 拷贝项目中data-man-mongodb-ent-2019.3.0.jar包到安装目录替换原有的包
-
+  
   3. 运行官方的二进制可执行文件
 
-##### command mode:
+##### 命令方式:
   1. 注意！注意！现在无需使用任何jar包只需要运行命令即可轻松跳过验证。
 
   2. 拷贝Studio3T安装目录下一个名为data-man-mongodb-xxxxx.jar的文件路径。

@@ -17,14 +17,14 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
 #### How to Use?
 
 
-##### 包替换方式:
+##### package replace:
   1. backup data-man-mongodb-ent-2019.3.0.jar package
 
   2. Copy the data-man-mongodb-ent-2019.3.0.jar from the project to the installation directory and replace the original package
-  
+
   3. Run the official binary executable
 
-##### 命令方式:
+##### command mode:
 
   1. Attention!!!Attention!!!Now you can easily skip validation without using any jar packages and just run the command
 
