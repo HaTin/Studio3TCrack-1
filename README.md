@@ -24,6 +24,10 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
 
   3. Run the official binary executable
 
+  ps: Mac Appear damaged
+  Security and privacy->Open any source
+  No hava any source  terminal execute ```sudo spctl --master-disable```
+
 ##### command mode:
 
   1. Attention!!!Attention!!!Now you can easily skip validation without using any jar packages and just run the command
@@ -42,7 +46,7 @@ English | [中文](https://github.com/linG5821/Studio3TCrack/blob/master/README.
 #### Version Update
     2019.7.26: 1. The data-man-mongodb package that can be directly replaced can be directly copied to the installation directory for replacement, and then the official binary                executable file can be directly provided. This package version 2019.3.0
                2. Problem: custom Settings cannot be saved, but connection information can be saved
-               3. You can use the functions of enterprise edition: click help->license manager to input the anything and then click ok to use the functions of enterprise edition
+               3. You can use the functions of enterprise edition on windows: click help->license manager to input the anything and then click ok to use the functions of enterprise edition
     2019.6.27: Update starts as a script command, removing code-level control
     studio-3t-start-2019.2.1:Updated the code implementation, using new ideas to adapt to the new version of Studio 3T version 2019.2.1
     Usage: Same as before,No spaces in the path, special characters
